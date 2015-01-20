@@ -1,6 +1,6 @@
 <p>Are you sure you want to delete:</p>
 <blockquote><p><%= @item.content %></p></blockquote>
 <form action="/delete/<%= @item.id %>" method="POST">
-  <button type="submit" class="btn btn-primary" name="ok">OK</button>
-  <button type="submit" class="btn" name="cancel">Cancel</button>
+  <button type="submit" class="btn btn-primary" name="ok"><i class="icon-ok-sign icon-white"></i> OK</button>
+  <button type="submit" class="btn" name="cancel"><i class="icon-ban-circle"></i> Cancel</button>
 </form>
