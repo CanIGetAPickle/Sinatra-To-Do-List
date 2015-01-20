@@ -12,7 +12,7 @@
       }
       
       #todo-list li {
-        border-bottom: 1px solid #333333;
+        border-bottom: 3px solid #333333;
         padding: 15px 0;
       }
     </style>
@@ -38,10 +38,10 @@
     </div>
 
     <div class="container">
-
+      <div style="text-align:center">
       <h1><%= @title %></h1>
-      <%= yield %>
-
+      </div>
+        <%= yield %>
     </div>
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
