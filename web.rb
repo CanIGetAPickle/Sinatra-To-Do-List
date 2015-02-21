@@ -2,9 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
 require 'json'
-require 'pg'
-
-# require "sinatra/reloader" if development?
+require "sinatra/reloader" if development?
 
 # Set port for compatability with Nitrous.IO 
 configure :development do   
@@ -13,7 +11,7 @@ configure :development do
 end
 
 
-DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/todo_list.db")
+DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/todo_list.db")
 class Item
   include DataMapper::Resource
   property :id, Serial
