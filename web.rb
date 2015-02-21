@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
 require 'json'
+require 'pg'
 require "sinatra/reloader" if development?
 
 # Set port for compatability with Nitrous.IO 
