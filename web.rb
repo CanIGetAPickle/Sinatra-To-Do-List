@@ -12,7 +12,7 @@ configure :development do
 end
 
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/todo_list.db")
+DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/todo_list.db")
 class Item
   include DataMapper::Resource
   property :id, Serial
